@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<script>
+var iron = 0
+var gold = 0
+var crystals = 0
+var asteroids = 0
+var platinum = 0
+var zinc = 0
+var copper = 0
+var helium = 0
+function get_stuff(){
+var user= prompt('landing type')
+var cut = 1
+if (user==='bad'){
+cut = 0.5
+}
+if(user==='crash'){
+cut = 0
+}
+iron+=Math.floor((Math.random()*50)*cut)
+gold+=Math.floor((Math.random()*10)*cut)
+crystals+=Math.floor((Math.random()*5)*cut)
+platinum+=Math.floor((Math.random()*15)*cut)
+zinc+=Math.floor((Math.random()*30)*cut)
+copper+=Math.floor((Math.random()*35)*cut)
+helium+=Math.floor((Math.random()*25)*cut)
+asteroids++
+document.getElementById('iron').innerHTML=iron;
+document.getElementById('gold').innerHTML=gold;
+document.getElementById('crystals').innerHTML=crystals;
+document.getElementById('platinum').innerHTML=platinum;
+document.getElementById('zinc').innerHTML=zinc;
+document.getElementById('copper').innerHTML=copper;
+document.getElementById('helium').innerHTML=helium;
+document.getElementById('asteroids').innerHTML=asteroids;
+}
+</script>
+<style>
+</style>
+<title></title>
+</head>
+<body>
+<h1>raw material.</h1>
+<input type='button' value='go mining!' onclick='get_stuff()'>
+<div>Total iron: <span id='iron'>0</span></div>
+<div>Total gold: <span id='gold'>0</span></div>
+<div>Total crystals: <span id='crystals'>0</span></div>
+<div>Total platinum: <span id='platinum'>0</span></div>
+<div>Total zinc: <span id='zinc'>0</span></div>
+<div>Total copper: <span id='copper'>0</span></div>
+<div>Total helium: <span id='helium'>0</span></div>
+<div>Total asteroids mined: <span id='asteroids'>0</span></div>
+<a href='market.html'><input type='button' value='sell stuff'></a>
+</body>
+</html>
