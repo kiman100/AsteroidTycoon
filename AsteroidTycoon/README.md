@@ -1,4 +1,0 @@
-SpaceApps
-=========
-
-SpaceApps Melbourne
